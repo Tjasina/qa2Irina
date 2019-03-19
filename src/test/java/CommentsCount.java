@@ -100,7 +100,8 @@ public class CommentsCount {
          //convert to integer and delete the first symbol
         int anonimousCommentValue = Integer.parseInt(stringAnonimousCommentPageCount.substring(1));
 
-
+       // commentCount = commentCount.substring(1, commentCount.length() -1);
+      //  this.commentCount = Integer.valueOf(commentCount);
 
 
         //Find registered comment count on comments page
