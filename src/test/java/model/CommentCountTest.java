@@ -30,13 +30,13 @@ public class CommentCountTest {
         driver.get(URL);
 
         List<WebElement> articles = driver.findElements(ARTICLE);
-        Article article = getArticle(articles, 3);
+        Article article = getArticle(articles, 2);
 
 
         String homePageTitleTxt = article.getTitle();
         Integer homePageComments = article.getCommentCount();
 
-        articles.get(3).click();
+        articles.get(2).click();
 
 
         String articlePageTitleTxt = article.getTitle();
@@ -49,9 +49,11 @@ public class CommentCountTest {
         WebElement articlePageTitleCommentLink = driver.findElement(COMMENT_COUNTER);
         articlePageTitleCommentLink.click();
 
-        List<WebElement> comments = driver.findElements(COMMENT);
 
         String commentPageTitle = article.getTitle();
+
+
+        List<WebElement> comments = driver.findElements(COMMENT);
 
 
         String commentPageAnonimousCommentsTxt = comments.get(0).getText();
